@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PRO SIM – Simulateur Professionnel Marocain</title>
+<meta name="description" content="PRO SIM : simulateur professionnel marocain, 35 métiers et 6 secteurs, plus huit spécialités de simulation.">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=IBM+Plex+Sans:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/prosim.css">
+</head>
+<body>
+<a class="skip" href="#app">Aller au contenu</a>
+<header><div class="wrap"><a class="logo" href="#home" data-go="home"><img src="img/logo.png" alt="" width="40" height="40"><span>ProSim</span></a>
+<nav aria-label="Navigation principale"><button data-v="home" class="on">Accueil</button><button data-v="missions">Spécialités</button><button data-v="jobs">Métiers</button><button data-v="dash">Ma progression</button><button data-v="review" id="rv">Réviser</button><button data-v="board">Classement</button></nav>
+<div class="tools"><select id="lang" class="lg" aria-label="Langue"><option value="fr">Français</option></select><button class="tg on" id="sfx" aria-pressed="true">Sons</button><button class="tg" id="mus" aria-pressed="false">Musique</button><button class="tg" id="theme">Thème : auto</button></div><div class="usr" id="usr"></div>
+</div></header>
+<div id="hud"></div>
+<main><div class="wrap" id="app"></div></main>
+<noscript><p style="padding:20px">ProSim a besoin de JavaScript pour fonctionner.</p></noscript>
+<div id="toasts" aria-live="polite" role="status"></div>
+<script src="js/core/utils.js"></script>
+<script src="js/core/constants.js"></script>
+<script src="js/core/illustrations.js"></script>
+<script src="js/core/audio.js"></script>
+<script src="js/core/state.js"></script>
+<script src="js/core/store.js"></script>
+<script src="js/core/safe.js"></script>
+<script src="js/core/auth.js"></script>
+<script src="js/core/visitors.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/core/cloud.js"></script>
+<script src="js/core/embed.js"></script>
+<script src="js/core/character.js"></script>
+<script src="js/core/economy.js"></script>
+<script src="js/core/ui.js"></script>
+<script src="js/core/i18n.js"></script>
+<script src="js/core/fx.js"></script>
+<script src="js/data/levels.js"></script>
+<script src="js/data/speakers.js"></script>
+<script src="js/data/sectors.js"></script>
+<script src="js/data/fields/finance.js"></script>
+<script src="js/data/fields/audit.js"></script>
+<script src="js/data/fields/controle-gestion.js"></script>
+<script src="js/data/fields/commerce.js"></script>
+<script src="js/data/fields/logistique.js"></script>
+<script src="js/data/fields/marketing.js"></script>
+<script src="js/data/fields/entrepreneuriat.js"></script>
+<script src="js/data/fields/management.js"></script>
+<script src="js/data/banks/finance.js"></script>
+<script src="js/data/banks/audit.js"></script>
+<script src="js/data/banks/controle-gestion.js"></script>
+<script src="js/data/banks/commerce.js"></script>
+<script src="js/data/banks/logistique.js"></script>
+<script src="js/data/banks/marketing.js"></script>
+<script src="js/data/banks/entrepreneuriat.js"></script>
+<script src="js/data/banks/management.js"></script>
+<script src="js/engine/rounds.js"></script>
+<script src="js/engine/progress.js"></script>
+<script src="js/engine/career.js"></script>
+<script src="js/engine/rewards.js"></script>
+<script src="js/views/home.js"></script>
+<script src="js/views/missions.js"></script>
+<script src="js/views/setup.js"></script>
+<script src="js/views/play.js"></script>
+<script src="js/views/report.js"></script>
+<script src="js/views/dash.js"></script>
+<script src="js/views/auth.js"></script>
+<script src="js/views/profile.js"></script>
+<script src="js/views/board.js"></script>
+<script src="js/views/review.js"></script>
+<script src="js/views/char.js"></script>
+<script src="js/views/jobs.js"></script>
+<script src="js/views/suggest.js"></script>
+<script src="js/views/admin.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+function missions(){app.innerHTML=`<h2>Choisissez votre spécialité</h2><p class="muted">Chaque spécialité propose 30 situations professionnelles : 10 en Débutant, 10 en Intermédiaire et 10 en Difficile.</p>${cards()}`;wire()}

@@ -1,0 +1,9 @@
+/* Carnet de révision : rejouer les questions ratées */
+function review(){const E=D.errors;
+app.innerHTML=`<h2>Carnet de révision</h2><p class="muted">Les questions où vous n’avez pas choisi la meilleure option y sont enregistrées. Répondez-y correctement pour les retirer du carnet.</p>
+${E.length?`<div class="panel"><div class="row" style="justify-content:space-between"><div><b>${E.length} question${E.length>1?'s':''} à revoir</b><div class="muted">Une session reprend les 10 plus anciennes.</div></div><button class="btn" id="st">Commencer la révision</button></div></div>
+<div class="panel" style="margin-top:14px"><h3>Détail</h3><div style="overflow-x:auto"><table><tr><th>Spécialité</th><th>Niveau</th><th>Question</th><th>Échecs</th></tr>${E.map(e=>{const q=BANK[F[e.fi].n][e.dg][e.j],t=SQ(q[2],q[0],e.fi).q;return `<tr><td>${esc(F[e.fi].n)}</td><td>${LN[e.dg]}</td><td>${esc(t.length>110?t.slice(0,107)+'…':t)}</td><td>${e.n}</td></tr>`}).join('')}</table></div><p style="margin:12px 0 0"><button class="btn ghost" id="cl">Vider le carnet</button></p></div>`
+:`<div class="panel"><p class="muted">Rien à réviser : bravo ! Continuez à vous entraîner pour enrichir votre carnet.</p><button class="btn" id="g">Choisir une spécialité</button></div>`}`;
+const st=$('#st');if(st)st.onclick=()=>startRun({diff:'int',mode:'review'},reviewRounds());
+const g=$('#g');if(g)g.onclick=()=>nav('missions');
+const cl=$('#cl');if(cl)cl.onclick=()=>{const d=openModal(`<h3>Vider le carnet ?</h3><p>Les ${E.length} questions seront retirées sans être corrigées.</p><div class="row"><button class="btn danger" id="y">Vider</button><button class="btn ghost" id="n">Annuler</button></div>`);d.querySelector('#n').onclick=closeModal;d.querySelector('#y').onclick=()=>{D.errors=[];persist();closeModal();renderHeader();review()}}}
